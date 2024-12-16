@@ -1,5 +1,5 @@
 {
-  "name": "react-native-webview-autoheight",
+  "name": "@ab6162/react-native-webview-autoheight",
   "version": "1.0.0",
   "description": "An autoheight for React Native WebView. Updated for React 18+.",
   "main": "WebViewAutoHeight",
@@ -9,6 +9,8 @@
     "index.d.ts",
     "WebViewAutoHeight"
   ],
+  "private": false,
+  "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
