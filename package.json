@@ -1,6 +1,6 @@
 {
   "name": "@ab6162/react-native-webview-autoheight",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An autoheight for React Native WebView. Updated for React 18+.",
   "main": "WebViewAutoHeight",
   "types": "index.d.ts",
