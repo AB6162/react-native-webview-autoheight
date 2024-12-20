@@ -1,6 +1,6 @@
 {
   "name": "@ab6162/react-native-webview-autoheight",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An autoheight for React Native WebView. Updated for React 18+.",
   "main": "WebViewAutoHeight",
   "types": "index.d.ts",
@@ -32,9 +32,9 @@
   },
   "homepage": "https://github.com/ab6162/react-native-webview-autoheight#readme",
   "peerDependencies": {
-    "react": ">= 18.2.0",
-    "react-native": ">= 0.74.5",
-    "react-native-webview": ">= 13.8.6"
+    "react": ">= 18.3.1",
+    "react-native": ">= 0.76.5",
+    "react-native-webview": ">= 13.12.5"
   },
   "dependencies": {
     "deprecated-react-native-prop-types": "^2.3.0",

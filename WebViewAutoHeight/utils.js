@@ -50,8 +50,9 @@ const updateSizeWithMessage = (element, scalesPageToFit) =>
       width = ${element}.offsetWidth || document.documentElement.offsetWidth
     }
 
-
-    window.ReactNativeWebView.postMessage(JSON.stringify({ width: Math.min(width, screen.width), height: height * usingScale, topic: ${topicString} }));
+    if (Math.abs(height - lastHeight) > 1) {
+      window.ReactNativeWebView.postMessage(JSON.stringify({ width: Math.min(width, screen.width), height: height * usingScale, topic: ${topicString} }));
+    }
 
     // Make additional height checks (required to fix issues wit twitter embeds)
     clearTimeout(forceRefreshTimeout);

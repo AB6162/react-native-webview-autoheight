@@ -35,20 +35,32 @@ const WebViewAutoHeight = React.memo(
     const [scrollable, setScrollable] = useState(false);
 
     const handleMessage = (event) => {
+
       if (event.nativeEvent) {
+
         try {
           const data = JSON.parse(event.nativeEvent.data);
+
           if (data.topic !== topic) {
             onMessage && onMessage(event);
             return;
           }
+
           const { height, width, zoomedin } = data;
+
           !scrollEnabled &&
             scrollEnabledWithZoomedin &&
             setScrollable(!!zoomedin);
+
           const { height: previousHeight, width: previousWidth } = size;
-          isSizeChanged({ height, previousHeight, width, previousWidth }) &&
+
+          if (
+            isSizeChanged({ height, previousHeight, width, previousWidth }) &&
+            Math.abs(height - previousHeight) > 1 // Evitar actualizaciones por pequeñas variaciones
+          ) {
             setSize({ height, width });
+          }
+
         } catch (error) {
           onMessage && onMessage(event);
         }
